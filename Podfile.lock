@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.2.1)
+  - LeanCloud/Foundation (17.5.6):
+    - Alamofire (~> 5.0)
+  - lottie-ios (3.1.8)
+
+DEPENDENCIES:
+  - LeanCloud/Foundation
+  - lottie-ios
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - LeanCloud
+    - lottie-ios
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  LeanCloud: a79712d665ca109870d66857a67538e5f102440c
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+
+PODFILE CHECKSUM: 13e777785389af145b92297bac2991512383ba01
+
+COCOAPODS: 1.9.1
