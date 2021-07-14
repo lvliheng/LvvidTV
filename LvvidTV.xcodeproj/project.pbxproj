@@ -20,7 +20,7 @@
 		F9370E7D24A1CB4F00295304 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9370E7B24A1CB4F00295304 /* SplashViewController.swift */; };
 		F9370E7E24A1CB4F00295304 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9370E7C24A1CB4F00295304 /* PlayerViewController.swift */; };
 		F9370E8324A1D0F800295304 /* vividtv.gif in Resources */ = {isa = PBXBuildFile; fileRef = F9370E8224A1D0F800295304 /* vividtv.gif */; };
-		F9370E9124A1E62E00295304 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F9370E9024A1E62E00295304 /* logo.png */; };
+		F9370E9324A23FE600295304 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F9370E9224A23FE600295304 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		F9370E7C24A1CB4F00295304 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		F9370E8224A1D0F800295304 /* vividtv.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = vividtv.gif; sourceTree = "<group>"; };
 		F9370E8824A1D9D400295304 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9370E9024A1E62E00295304 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Desktop/LvvidTV/logo.png; sourceTree = "<group>"; };
+		F9370E9224A23FE600295304 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		F9370E8124A1D0C500295304 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				F9370E9024A1E62E00295304 /* logo.png */,
+				F9370E9224A23FE600295304 /* logo.png */,
 				F9370E8224A1D0F800295304 /* vividtv.gif */,
 			);
 			path = Screenshots;
@@ -184,7 +184,7 @@
 				F9370E8324A1D0F800295304 /* vividtv.gif in Resources */,
 				F9370E3724A1C86A00295304 /* Assets.xcassets in Resources */,
 				F9370E7624A1C95B00295304 /* player_volume_icon_progress_lottie.json in Resources */,
-				F9370E9124A1E62E00295304 /* logo.png in Resources */,
+				F9370E9324A23FE600295304 /* logo.png in Resources */,
 				F9370E7224A1C93800295304 /* Main.storyboard in Resources */,
 				F9370E7524A1C95B00295304 /* player_brightness_icon_lottie.json in Resources */,
 			);

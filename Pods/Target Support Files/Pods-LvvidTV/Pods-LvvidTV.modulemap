@@ -1,0 +1,6 @@
+framework module Pods_LvvidTV {
+  umbrella header "Pods-LvvidTV-umbrella.h"
+
+  export *
+  module * { export * }
+}

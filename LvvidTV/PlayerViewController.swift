@@ -60,6 +60,8 @@ class PlayerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         NotificationCenter.default.addObserver(self, selector: #selector(resume), name: UIApplication.didBecomeActiveNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(volumeDidChange), name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"), object: nil)
+        
         self.picker.delegate = self
         self.picker.dataSource = self
         
@@ -331,6 +333,36 @@ class PlayerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @objc private func resume() {
         player?.play()
+    }
+    
+    @objc func volumeDidChange(notification: NSNotification) {
+        if menuView.isHidden {
+            let volumeType = notification.userInfo!["AVSystemController_AudioVolumeChangeReasonNotificationParameter"] as! String
+            
+            if volumeType.isEqual("ExplicitVolumeChange") {
+                let volume = notification.userInfo!["AVSystemController_AudioVolumeNotificationParameter"] as! Float
+                showVolumeProgress(currentVolume: volume)
+            }
+        }
+    }
+    
+    func showVolumeProgress(currentVolume: Float) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(hideVolumeAndBrightnessBackground), object: nil)
+        
+        volumeAndBrightnessProgress.progress = Float(currentVolume)
+        currentVolumeValue = volumeAndBrightnessProgress.progress
+        
+        animationView.animation = Animation.named("player_volume_icon_progress_lottie")
+        animationView.currentProgress = AnimationProgressTime(currentVolumeValue)
+        
+        volumeAndBrightnessBackGround.isHidden = false
+        self.view.bringSubviewToFront(volumeAndBrightnessBackGround)
+        
+        perform(#selector(hideVolumeAndBrightnessBackground), with: nil, afterDelay: delayTwoSenconds)
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
     }
 }
 

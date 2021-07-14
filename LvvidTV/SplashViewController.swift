@@ -117,7 +117,10 @@ class SplashViewController: UIViewController {
         let playerViewController = storyboard.instantiateViewController(withIdentifier: "Player")
         
         self.present(playerViewController, animated: false, completion: nil)
-        
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
     }
 }
 
